@@ -5,14 +5,13 @@ const inputTag = document.querySelector("#input");
 const errorTag = document.querySelector("#error");
 
 jsBtn.addEventListener("click", () => {
-  const word = wordTag.textContent;
-  const input = inputTag.value;
-  const lastIndex = word.length - 1;
-  const i = input[0];
-  const w = word[lastIndex];
-
-  if (w === i) {
-    wordTag.textContent = input;
+  if (
+    inputTag.value[0] === wordTag.textContent[wordTag.textContent.length - 1]
+  ) {
+    //const wordIndex=word.length-1;
+    //word[wordIndex];
+    //변수를 하나만 사용할꺼면, 그냥 변수를 선언하지 말고 직접 대입해라.
+    wordTag.textContent = inputTag.value;
     errorTag.textContent = "";
     inputTag.value = "";
     inputTag.focus();
