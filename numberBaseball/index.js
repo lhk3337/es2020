@@ -2,13 +2,20 @@ const input = document.querySelector("#input");
 const check = document.querySelector("#check");
 const result = document.querySelector("#result");
 
-let answer = [
-  String(Math.floor(Math.random()) * 10),
-  String(Math.floor(Math.random()) * 10),
-  String(Math.floor(Math.random()) * 10),
-  String(Math.floor(Math.random()) * 10),
-];
-console.log(Number(answer.join("")));
+let answer = [];
+let n = 0;
+while (n <= 3) {
+  answer[n] = Math.floor(Math.random() * 10);
+  n++;
+}
+
+// let answer = [
+//   String(Math.floor(Math.random()) * 10),
+//   String(Math.floor(Math.random()) * 10),
+//   String(Math.floor(Math.random()) * 10),
+//   String(Math.floor(Math.random()) * 10),
+// ];
+// console.log(Number(answer.join("")));
 
 // const first = String(Math.floor(Math.random()) * 10); //3  숫자 첫번쨰
 // const second = String(Math.floor(Math.random()) * 10); //0 숫자 두번째
