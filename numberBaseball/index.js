@@ -4,10 +4,13 @@ const result = document.querySelector("#result");
 
 let answer;
 
-const first = Math.floor(Math.random()) * 10;
-const second = Math.floor(Math.random()) * 10;
-const third = Math.floor(Math.random()) * 10;
-const fourth = Math.floor(Math.random()) * 10;
+const first = String(Math.floor(Math.random()) * 10); //3
+const second = String(Math.floor(Math.random()) * 10); //0
+const third = String(Math.floor(Math.random()) * 10); //4
+const fourth = String(Math.floor(Math.random()) * 10); //6
+
+first + second + third + fourth; //=> 3 + 0 + 4 + 6 = 13
+// "3046" => String(first) + String(second) + String(third) + String(fourth)
 
 let count = 0;
 check.addEventListener("click", () => {
