@@ -2,14 +2,20 @@ const input = document.querySelector("#input");
 const check = document.querySelector("#check");
 const result = document.querySelector("#result");
 
-let answer;
+let answer = [
+  String(Math.floor(Math.random()) * 10),
+  String(Math.floor(Math.random()) * 10),
+  String(Math.floor(Math.random()) * 10),
+  String(Math.floor(Math.random()) * 10),
+];
+console.log(Number(answer.join("")));
 
-const first = String(Math.floor(Math.random()) * 10); //3
-const second = String(Math.floor(Math.random()) * 10); //0
-const third = String(Math.floor(Math.random()) * 10); //4
-const fourth = String(Math.floor(Math.random()) * 10); //6
+// const first = String(Math.floor(Math.random()) * 10); //3  숫자 첫번쨰
+// const second = String(Math.floor(Math.random()) * 10); //0 숫자 두번째
+// const third = String(Math.floor(Math.random()) * 10); //4  숫자 세번째
+// const fourth = String(Math.floor(Math.random()) * 10); //6 숫자 네번쨰
 
-first + second + third + fourth; //=> 3 + 0 + 4 + 6 = 13
+// first + second + third + fourth; //=> 3 + 0 + 4 + 6 = 13
 // "3046" => String(first) + String(second) + String(third) + String(fourth)
 
 let count = 0;
