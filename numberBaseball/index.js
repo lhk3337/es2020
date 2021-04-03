@@ -43,6 +43,7 @@ check.addEventListener("click", () => {
   const value = input.value; //문자열 ex) '3046' true truthy
   // 0, '', NaN, false, null, undefined -> false value
   if (answer.join("") === value) {
+    //배열 비교 [ ] === [ ] false나오기 때문에 배열을 문자열로 변환 후 비교
     result.appendChild(document.createTextNode("HR"));
   } else {
     console.log("다르다");
