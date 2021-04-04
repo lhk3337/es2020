@@ -44,8 +44,33 @@ check.addEventListener("click", () => {
   // 0, '', NaN, false, null, undefined -> false value
   if (answer.join("") === value) {
     //배열 비교 [ ] === [ ] false나오기 때문에 배열을 문자열로 변환 후 비교
-    result.appendChild(document.createTextNode("HR"));
+    result.appendChild(document.createTextNode("HR")); //div태그안 text입력
   } else {
     console.log("다르다");
+    let strike = 0;
+    let ball = 0;
+    for (const [aIndex, aNumber] of answer.entries()) {
+      for (const [iIndex, iString] of input.value.split("").entries()) {
+        console.log(typeof aNumber, typeof iString);
+        if (aNumber === Number(iString)) {
+          if (aIndex === iIndex) {
+            strike += 1;
+          } else {
+            ball += 1;
+          }
+        }
+      }
+    }
+    result.append(
+      `${input.value}: ${strike} strike ${ball} ball`,
+      document.createElement("br")
+    );
+    if (count > 10) {
+      result.appendChild(
+        document.createTextNode(`Game Over : ${answer.join("")}`)
+      );
+    } else {
+      count++;
+    }
   }
 });
